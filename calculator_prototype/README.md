@@ -1,6 +1,6 @@
-# calculator_prototype
+# Only a calculator
 
-A new Flutter project.
+A new Flutter project based on https://github.com/florinpop17/app-ideas idea.
 
 ## Getting Started
 
