@@ -2,6 +2,10 @@
 
 A new Flutter project based on https://github.com/florinpop17/app-ideas idea.
 
+## Initial state afetr first commit:
+
+![Alt Text](./media/appGif_v1.gif)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
