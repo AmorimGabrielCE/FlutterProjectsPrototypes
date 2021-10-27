@@ -555,14 +555,16 @@ class _calculatorState extends State<calculator> {
                 InkWell(
                   onTap: (() {
                     if (control == false) {
-                      if (firstNumber.length <= 7) {
+                      if (firstNumber.length <= 7 &&
+                          !firstNumber.contains(".")) {
                         firstNumber += '.';
                       } else {
                         update();
                       }
                       update();
                     } else {
-                      if (secondNumber.length <= 7) {
+                      if (secondNumber.length <= 7 &&
+                          !secondNumber.contains(".")) {
                         secondNumber += '.';
                       } else {
                         update();
