@@ -6,9 +6,9 @@ A new Flutter project based on https://github.com/florinpop17/app-ideas idea.
 
 ![Alt Text](./media/appGif_v1.gif)
 
-## State after commit of version 1.01:
+## State after v1.01 commit:
 
-![Alt Text]()
+![Alt Text](./media/appGif_v1.01.gif)
 
 ## Getting Started
 
