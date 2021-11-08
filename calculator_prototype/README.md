@@ -2,9 +2,13 @@
 
 A new Flutter project based on https://github.com/florinpop17/app-ideas idea.
 
-## Initial state afetr first commit:
+## Initial state after first commit:
 
 ![Alt Text](./media/appGif_v1.gif)
+
+## State after commit of version 1.01:
+
+![Alt Text]()
 
 ## Getting Started
 
