@@ -13,6 +13,10 @@ class _calculatorState extends State<calculator> {
   String firstNumber = '';
   String secondNumber = '';
   double result = 0;
+  String displayResult = '';
+  int resultLength = 0;
+  String lastFourChars = '';
+  int notDecimal = 0;
   String operation = Operacoes().operationSymbol("");
 
   final objOperacoes = Operacoes();
@@ -38,7 +42,7 @@ class _calculatorState extends State<calculator> {
                 Container(
                   margin: const EdgeInsets.all(2),
                   child: Text(
-                    firstNumber == '' ? '0' : firstNumber,
+                    firstNumber,
                     style: TextStyle(fontSize: 40),
                   ),
                   alignment: Alignment.centerRight,
@@ -61,7 +65,7 @@ class _calculatorState extends State<calculator> {
                 Container(
                   margin: const EdgeInsets.all(2),
                   child: Text(
-                    secondNumber == '' ? '0' : secondNumber,
+                    secondNumber,
                     style: TextStyle(fontSize: 40),
                   ),
                   alignment: Alignment.centerRight,
@@ -75,7 +79,7 @@ class _calculatorState extends State<calculator> {
                 Container(
                   margin: const EdgeInsets.all(2),
                   child: Text(
-                    "= " + result.toStringAsFixed(2),
+                    displayResult == '' ? '' : "= " + displayResult,
                     style: TextStyle(fontSize: 48),
                   ),
                   alignment: Alignment.centerRight,
@@ -89,14 +93,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '7';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '7';
                             } else {
                               update();
@@ -119,14 +123,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '8';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '8';
                             } else {
                               update();
@@ -149,14 +153,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '9';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '9';
                             } else {
                               update();
@@ -202,6 +206,7 @@ class _calculatorState extends State<calculator> {
                           result = 0;
                           control = false;
                           operation = Operacoes().operationSymbol('');
+                          displayResult = '';
                           update();
                         }),
                         child: Container(
@@ -220,14 +225,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '4';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '4';
                             } else {
                               update();
@@ -250,14 +255,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '5';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '5';
                             } else {
                               update();
@@ -280,14 +285,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '6';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '6';
                             } else {
                               update();
@@ -332,28 +337,44 @@ class _calculatorState extends State<calculator> {
                             result = objOperacoes.soma(
                                 double.parse(firstNumber),
                                 double.parse(secondNumber));
+                            print(result);
                             update();
                           } else if (operation == '-') {
                             result = objOperacoes.subtracao(
                                 double.parse(firstNumber),
                                 double.parse(secondNumber));
+                            print(result);
                             update();
                           } else if (operation == '*') {
                             result = objOperacoes.multiplicacao(
                                 double.parse(firstNumber),
                                 double.parse(secondNumber));
+                            print(result);
                             update();
                           } else if (operation == '/') {
                             result = objOperacoes.divisao(
                                 double.parse(firstNumber),
                                 double.parse(secondNumber));
+                            print(result);
                             update();
                           } else {
                             update();
                           }
-                          firstNumber = result.toStringAsFixed(2);
+                          resultLength = result.toStringAsFixed(4).length;
+                          // tam minimo = 6 e max = 13
+                          lastFourChars = result
+                              .toStringAsFixed(4)
+                              .substring(resultLength - 4, resultLength);
                           operation = '';
                           secondNumber = '';
+                          if (lastFourChars == '0000') {
+                            result.abs();
+                            displayResult = result.toStringAsFixed(0);
+                            firstNumber = result.toStringAsFixed(0);
+                          } else {
+                            displayResult = result.toStringAsFixed(4);
+                            firstNumber = result.toStringAsFixed(4);
+                          }
                           update();
                         }),
                         child: Container(
@@ -372,14 +393,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '1';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '1';
                             } else {
                               update();
@@ -402,14 +423,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '2';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '2';
                             } else {
                               update();
@@ -432,14 +453,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '3';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '3';
                             } else {
                               update();
@@ -513,14 +534,14 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7) {
+                            if (firstNumber.length <= 3) {
                               firstNumber += '0';
                             } else {
                               update();
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7) {
+                            if (secondNumber.length <= 3) {
                               secondNumber += '0';
                             } else {
                               update();
@@ -569,7 +590,7 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 7 &&
+                            if (firstNumber.length <= 3 &&
                                 !firstNumber.contains(".")) {
                               firstNumber += '.';
                             } else {
@@ -577,7 +598,7 @@ class _calculatorState extends State<calculator> {
                             }
                             update();
                           } else {
-                            if (secondNumber.length <= 7 &&
+                            if (secondNumber.length <= 3 &&
                                 !secondNumber.contains(".")) {
                               secondNumber += '.';
                             } else {
