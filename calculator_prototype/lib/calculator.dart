@@ -93,20 +93,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '7';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '7';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '7';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '7';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '7';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '7';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '7';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '7';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -123,20 +154,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '8';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '8';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '8';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '8';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '8';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '8';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '8';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '8';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -153,20 +215,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '9';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '9';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '9';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '9';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '9';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '9';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '9';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '9';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -225,20 +318,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '4';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '4';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '4';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '4';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '4';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '4';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '4';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '4';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -255,20 +379,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '5';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '5';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '5';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '5';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '5';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '5';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '5';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '5';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -285,20 +440,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '6';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '6';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '6';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '6';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '6';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '6';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '6';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '6';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -393,20 +579,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '1';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '1';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '1';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '1';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '1';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '1';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '1';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '1';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -423,20 +640,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '2';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '2';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '2';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '2';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '2';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '2';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '2';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '2';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -453,20 +701,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '3';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '3';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '3';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '3';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '3';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '3';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '3';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '3';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -534,20 +813,51 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.length <= 3) {
-                              firstNumber += '0';
+                            if (firstNumber.contains(".") &&
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 5) {
+                                firstNumber += '0';
+                              } else {
+                                update();
+                              }
+                            } else if (firstNumber.contains(".") ||
+                                firstNumber.contains("-")) {
+                              if (firstNumber.length <= 4) {
+                                firstNumber += '0';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (firstNumber.length <= 3) {
+                                firstNumber += '0';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           } else {
-                            if (secondNumber.length <= 3) {
-                              secondNumber += '0';
+                            if (secondNumber.contains(".") &&
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 5) {
+                                secondNumber += '0';
+                              } else {
+                                update();
+                              }
+                            } else if (secondNumber.contains(".") ||
+                                secondNumber.contains("-")) {
+                              if (secondNumber.length <= 4) {
+                                secondNumber += '0';
+                              } else {
+                                update();
+                              }
                             } else {
-                              update();
+                              if (secondNumber.length <= 3) {
+                                secondNumber += '0';
+                              } else {
+                                update();
+                              }
                             }
-                            update();
                           }
+                          update();
                         }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
@@ -562,10 +872,34 @@ class _calculatorState extends State<calculator> {
                         ),
                       ),
                       InkWell(
+                        onTap: (() {
+                          if (control == false) {
+                            if (firstNumber == "") {
+                              firstNumber += '-';
+                            } else {
+                              update();
+                            }
+                            update();
+                          } else {
+                            if (secondNumber == "") {
+                              secondNumber += '-';
+                            } else {
+                              update();
+                            }
+                            update();
+                          }
+                        }),
                         child: Container(
                           margin: const EdgeInsets.all(5),
                           width: 70,
                           height: 70,
+                          child: Center(
+                            child: Text(
+                              "-x",
+                              style:
+                                  TextStyle(fontSize: 48, color: Colors.blue),
+                            ),
+                          ),
                         ),
                       ),
                       InkWell(
