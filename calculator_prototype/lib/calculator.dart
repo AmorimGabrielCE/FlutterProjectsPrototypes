@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'operations.dart';
+import 'numbers.dart';
 
 class calculator extends StatefulWidget {
   const calculator({Key? key}) : super(key: key);
@@ -93,49 +94,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '7';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '7';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '7';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '7');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '7';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '7';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '7';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '7');
                           }
                           update();
                         }),
@@ -154,49 +118,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '8';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '8';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '8';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '8');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '8';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '8';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '8';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '8');
                           }
                           update();
                         }),
@@ -215,49 +142,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '9';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '9';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '9';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '9');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '9';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '9';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '9';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '9');
                           }
                           update();
                         }),
@@ -318,49 +208,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '4';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '4';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '4';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '4');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '4';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '4';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '4';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '4');
                           }
                           update();
                         }),
@@ -379,49 +232,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '5';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '5';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '5';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '5');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '5';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '5';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '5';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '5');
                           }
                           update();
                         }),
@@ -440,49 +256,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '6';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '6';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '6';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '6');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '6';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '6';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '6';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '6');
                           }
                           update();
                         }),
@@ -579,49 +358,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '1';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '1';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '1';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '1');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '1';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '1';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '1';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '1');
                           }
                           update();
                         }),
@@ -640,49 +382,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '2';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '2';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '2';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '2');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '2';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '2';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '2';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '2');
                           }
                           update();
                         }),
@@ -701,49 +406,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '3';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '3';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '3';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '3');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '3';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '3';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '3';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '3');
                           }
                           update();
                         }),
@@ -813,49 +481,12 @@ class _calculatorState extends State<calculator> {
                       InkWell(
                         onTap: (() {
                           if (control == false) {
-                            if (firstNumber.contains(".") &&
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 5) {
-                                firstNumber += '0';
-                              } else {
-                                update();
-                              }
-                            } else if (firstNumber.contains(".") ||
-                                firstNumber.contains("-")) {
-                              if (firstNumber.length <= 4) {
-                                firstNumber += '0';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (firstNumber.length <= 3) {
-                                firstNumber += '0';
-                              } else {
-                                update();
-                              }
-                            }
+                            firstNumber =
+                                NumbersDart().tapNumber(firstNumber, '0');
+                            update();
                           } else {
-                            if (secondNumber.contains(".") &&
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 5) {
-                                secondNumber += '0';
-                              } else {
-                                update();
-                              }
-                            } else if (secondNumber.contains(".") ||
-                                secondNumber.contains("-")) {
-                              if (secondNumber.length <= 4) {
-                                secondNumber += '0';
-                              } else {
-                                update();
-                              }
-                            } else {
-                              if (secondNumber.length <= 3) {
-                                secondNumber += '0';
-                              } else {
-                                update();
-                              }
-                            }
+                            secondNumber =
+                                NumbersDart().tapNumber(secondNumber, '0');
                           }
                           update();
                         }),
