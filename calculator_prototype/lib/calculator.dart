@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'operations.dart';
 import 'numbers.dart';
+import 'styles.dart';
 
 class calculator extends StatefulWidget {
   const calculator({Key? key}) : super(key: key);
@@ -103,17 +104,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "7",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('7'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -127,17 +118,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "8",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('8'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -151,17 +132,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "9",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('9'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -217,17 +188,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "4",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('4'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -241,17 +202,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "5",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('5'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -265,17 +216,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "6",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('6'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -367,17 +308,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "1",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('1'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -391,17 +322,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "2",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('2'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -415,17 +336,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "3",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('3'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -490,17 +401,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "0",
-                              style: TextStyle(fontSize: 48),
-                            ),
-                          ),
-                        ),
+                        child: Styles('0'),
                       ),
                       InkWell(
                         onTap: (() {
