@@ -104,7 +104,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('7'),
+                        child: StylesNumbers('7'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -118,7 +118,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('8'),
+                        child: StylesNumbers('8'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -132,7 +132,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('9'),
+                        child: StylesNumbers('9'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -140,18 +140,7 @@ class _calculatorState extends State<calculator> {
                           operation = Operacoes().operationSymbol('sum');
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "+",
-                              style:
-                                  TextStyle(fontSize: 48, color: Colors.blue),
-                            ),
-                          ),
-                        ),
+                        child: StylesOthers('+'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -188,7 +177,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('4'),
+                        child: StylesNumbers('4'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -202,7 +191,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('5'),
+                        child: StylesNumbers('5'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -216,7 +205,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('6'),
+                        child: StylesNumbers('6'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -224,18 +213,7 @@ class _calculatorState extends State<calculator> {
                           operation = Operacoes().operationSymbol('minus');
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "-",
-                              style:
-                                  TextStyle(fontSize: 48, color: Colors.blue),
-                            ),
-                          ),
-                        ),
+                        child: StylesOthers('-'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -283,18 +261,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "=",
-                              style:
-                                  TextStyle(fontSize: 48, color: Colors.blue),
-                            ),
-                          ),
-                        ),
+                        child: StylesOthers('='),
                       ),
                       InkWell(
                         onTap: (() {
@@ -308,7 +275,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('1'),
+                        child: StylesNumbers('1'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -322,7 +289,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('2'),
+                        child: StylesNumbers('2'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -336,7 +303,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('3'),
+                        child: StylesNumbers('3'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -344,18 +311,7 @@ class _calculatorState extends State<calculator> {
                           operation = Operacoes().operationSymbol('multiple');
                           update();
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "*",
-                              style:
-                                  TextStyle(fontSize: 48, color: Colors.blue),
-                            ),
-                          ),
-                        ),
+                        child: StylesOthers('*'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -401,7 +357,7 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: Styles('0'),
+                        child: StylesNumbers('0'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -421,18 +377,7 @@ class _calculatorState extends State<calculator> {
                             update();
                           }
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              "-x",
-                              style:
-                                  TextStyle(fontSize: 48, color: Colors.blue),
-                            ),
-                          ),
-                        ),
+                        child: StylesOthers('-x'),
                       ),
                       InkWell(
                         onTap: (() {
@@ -473,18 +418,7 @@ class _calculatorState extends State<calculator> {
                             update();
                           }
                         }),
-                        child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
-                          child: Center(
-                            child: Text(
-                              ".",
-                              style:
-                                  TextStyle(fontSize: 48, color: Colors.blue),
-                            ),
-                          ),
-                        ),
+                        child: StylesOthers('.'),
                       ),
                     ],
                   ),
