@@ -1,7 +1,10 @@
-# quizapp_prototype
+# Quiz App
 
-A new Flutter project.
+A new Flutter project with learning porpose, based on a https://github.com/florinpop17/app-ideas idea.
 
+## Initial state after first commit:
+
+![Alt Text](./media/appGif_v0.01.gif)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
