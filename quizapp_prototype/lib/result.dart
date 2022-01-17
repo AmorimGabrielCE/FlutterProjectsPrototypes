@@ -10,6 +10,8 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+
     return Center(
       child: Column(
         children: [
@@ -18,7 +20,7 @@ class Result extends StatelessWidget {
               'Your score is: $resultScore/$questions',
               style: TextStyle(fontSize: 28),
             ),
-            margin: EdgeInsets.only(top: 200),
+            // margin: EdgeInsets.only(top: 200),
           ),
           InkWell(
             child: Container(
@@ -26,14 +28,16 @@ class Result extends StatelessWidget {
                 'Restart Quiz',
                 style: TextStyle(fontSize: 28.0, color: Colors.white),
               ),
-              width: double.infinity,
-              color: Colors.green,
-              margin: EdgeInsetsDirectional.all(50),
+              width: size.width * .75,
+              height: size.height * .05,
               alignment: Alignment.center,
+              color: Colors.red,
             ),
             onTap: resetHandler,
           )
         ],
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
       ),
     );
   }
