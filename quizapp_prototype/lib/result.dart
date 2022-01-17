@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import './main.dart';
 
 class Result extends StatelessWidget {
   final int resultScore;
   final Function resetHandler;
+  final int questions;
 
-  Result(this.resultScore, this.resetHandler);
+  Result(this.resultScore, this.resetHandler, this.questions);
 
   @override
   Widget build(BuildContext context) {
@@ -13,23 +15,23 @@ class Result extends StatelessWidget {
         children: [
           Container(
             child: Text(
-              'Your score is: $resultScore',
+              'Your score is: $resultScore/$questions',
               style: TextStyle(fontSize: 28),
             ),
             margin: EdgeInsets.only(top: 200),
           ),
-          Container(
-            child: InkWell(
-              child: Text(
+          InkWell(
+            child: Container(
+              child: const Text(
                 'Restart Quiz',
-                style: TextStyle(fontSize: 28, color: Colors.white),
+                style: TextStyle(fontSize: 28.0, color: Colors.white),
               ),
-              onTap: resetHandler,
+              width: double.infinity,
+              color: Colors.green,
+              margin: EdgeInsetsDirectional.all(50),
+              alignment: Alignment.center,
             ),
-            width: double.infinity,
-            color: Colors.green,
-            margin: EdgeInsetsDirectional.all(50),
-            alignment: Alignment.center,
+            onTap: resetHandler,
           )
         ],
       ),

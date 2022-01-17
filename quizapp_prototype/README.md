@@ -5,6 +5,10 @@ A new Flutter project with learning porpose, based on a https://github.com/flori
 ## Initial state after first commit:
 
 ![Alt Text](./media/appGif_v0.01.gif)
+
+## State after v0.02 commit (Adding more questions and some  little improvements):
+
+![Alt Text](./media/appGif_v0.02.gif)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
