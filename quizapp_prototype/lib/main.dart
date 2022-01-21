@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import './result.dart';
-import './questions.dart';
+import './home.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +19,6 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(primaryColor: Colors.red),
-        home: Scaffold(appBar: appBar, body: Questions()));
+        home: Scaffold(appBar: appBar, body: Home()));
   }
 }
