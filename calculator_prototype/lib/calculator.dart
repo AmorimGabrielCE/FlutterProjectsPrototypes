@@ -32,26 +32,22 @@ class _calculatorState extends State<calculator> {
     print("Refresh");
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Scaffold(
-          body: Container(
-            color: Colors.grey.withOpacity(0.2),
+        home: Scaffold(body: LayoutBuilder(builder: (_, constraints) {
+          var sizeWidth = constraints.maxWidth;
+          var sizeHeight = constraints.maxHeight;
+
+          return Container(
+            color: Colors.grey.withOpacity(.2),
             child: Column(
               children: [
                 Container(
-                  margin: const EdgeInsets.all(5),
-                  child: Text(''),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(2),
+                  margin: EdgeInsets.only(top: sizeHeight * .033),
                   child: Text(
                     firstNumber,
                     style: TextStyle(fontSize: 40),
                   ),
                   alignment: Alignment.centerRight,
-                ),
-                Container(
-                  margin: const EdgeInsets.all(2),
-                  child: Text(''),
+                  height: sizeHeight * .12,
                 ),
                 Container(
                   child: Text(
@@ -61,33 +57,24 @@ class _calculatorState extends State<calculator> {
                   alignment: Alignment.centerRight,
                 ),
                 Container(
-                  margin: const EdgeInsets.all(2),
-                  child: Text(''),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(2),
                   child: Text(
                     secondNumber,
                     style: TextStyle(fontSize: 40),
                   ),
                   alignment: Alignment.centerRight,
+                  height: sizeHeight * .12,
                 ),
                 Container(
-                  child: Text(
-                    '',
-                    style: TextStyle(fontSize: 40),
-                  ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(2),
                   child: Text(
                     displayResult == '' ? '' : "= " + displayResult,
                     style: TextStyle(fontSize: 48),
                   ),
                   alignment: Alignment.centerRight,
+                  height: sizeHeight * .12,
                 ),
                 Divider(
                   color: Colors.blue,
+                  height: sizeHeight * .05,
                 ),
                 Container(
                   child: Wrap(
@@ -104,7 +91,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('7'),
+                        child: StylesNumbers(
+                            '7', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -118,7 +106,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('8'),
+                        child: StylesNumbers(
+                            '8', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -132,7 +121,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('9'),
+                        child: StylesNumbers(
+                            '9', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -140,7 +130,8 @@ class _calculatorState extends State<calculator> {
                           operation = Operacoes().operationSymbol('sum');
                           update();
                         }),
-                        child: StylesOthers('+'),
+                        child: StylesOthers(
+                            '+', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -153,9 +144,8 @@ class _calculatorState extends State<calculator> {
                           update();
                         }),
                         child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
+                          width: sizeWidth * .19,
+                          height: sizeHeight * .12,
                           child: Center(
                             child: Icon(
                               Icons.refresh,
@@ -177,7 +167,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('4'),
+                        child: StylesNumbers(
+                            '4', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -191,7 +182,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('5'),
+                        child: StylesNumbers(
+                            '5', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -205,7 +197,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('6'),
+                        child: StylesNumbers(
+                            '6', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -213,7 +206,8 @@ class _calculatorState extends State<calculator> {
                           operation = Operacoes().operationSymbol('minus');
                           update();
                         }),
-                        child: StylesOthers('-'),
+                        child: StylesOthers(
+                            '-', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -261,7 +255,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesOthers('='),
+                        child: StylesOthers(
+                            '=', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -275,7 +270,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('1'),
+                        child: StylesNumbers(
+                            '1', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -289,7 +285,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('2'),
+                        child: StylesNumbers(
+                            '2', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -303,7 +300,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('3'),
+                        child: StylesNumbers(
+                            '3', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -311,7 +309,8 @@ class _calculatorState extends State<calculator> {
                           operation = Operacoes().operationSymbol('multiple');
                           update();
                         }),
-                        child: StylesOthers('*'),
+                        child: StylesOthers(
+                            '*', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -326,9 +325,8 @@ class _calculatorState extends State<calculator> {
                           }
                         }),
                         child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
+                          width: sizeWidth * .19,
+                          height: sizeHeight * .12,
                           child: Center(
                             child: Icon(
                               Icons.backspace,
@@ -340,9 +338,8 @@ class _calculatorState extends State<calculator> {
                       ),
                       InkWell(
                         child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
+                          width: sizeWidth * .19,
+                          height: sizeHeight * .12,
                         ),
                       ),
                       InkWell(
@@ -357,7 +354,8 @@ class _calculatorState extends State<calculator> {
                           }
                           update();
                         }),
-                        child: StylesNumbers('0'),
+                        child: StylesNumbers(
+                            '0', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -377,7 +375,8 @@ class _calculatorState extends State<calculator> {
                             update();
                           }
                         }),
-                        child: StylesOthers('-x'),
+                        child: StylesOthers(
+                            '-x', sizeWidth * .19, sizeHeight * .12),
                       ),
                       InkWell(
                         onTap: (() {
@@ -386,9 +385,8 @@ class _calculatorState extends State<calculator> {
                           update();
                         }),
                         child: Container(
-                          margin: const EdgeInsets.all(5),
-                          width: 70,
-                          height: 70,
+                          width: sizeWidth * .19,
+                          height: sizeHeight * .12,
                           child: Center(
                             child: Text(
                               "/",
@@ -418,14 +416,15 @@ class _calculatorState extends State<calculator> {
                             update();
                           }
                         }),
-                        child: StylesOthers('.'),
+                        child: StylesOthers(
+                            '.', sizeWidth * .19, sizeHeight * .12),
                       ),
                     ],
                   ),
                 ),
               ],
             ),
-          ),
-        ));
+          );
+        })));
   }
 }

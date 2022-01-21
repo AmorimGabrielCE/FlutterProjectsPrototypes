@@ -2,15 +2,16 @@ import 'package:flutter/material.dart';
 
 class StylesNumbers extends StatelessWidget {
   final String content;
+  final double buttonWidth;
+  final double buttonHeight;
 
-  StylesNumbers(this.content);
+  StylesNumbers(this.content, this.buttonWidth, this.buttonHeight);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(5),
-      width: 70,
-      height: 70,
+      width: buttonWidth,
+      height: buttonHeight,
       child: Center(
         child: Text(
           content,
@@ -23,15 +24,16 @@ class StylesNumbers extends StatelessWidget {
 
 class StylesOthers extends StatelessWidget {
   final String content;
+  final double buttonWidth;
+  final double buttonHeight;
 
-  StylesOthers(this.content);
+  StylesOthers(this.content, this.buttonWidth, this.buttonHeight);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(5),
-      width: 70,
-      height: 70,
+      width: buttonWidth,
+      height: buttonHeight,
       child: Center(
         child: Text(
           content,
